@@ -1,0 +1,16 @@
+@startuml
+
+class NQueenSolver {
+    - size : int
+    - board : int[][]
+    - static count : int
+
+    + NQueenSolver(n : int)
+    + ~NQueenSolver()
+    + solve() : void
+    - isSafe(row : int, col : int) : bool
+    - placeQueens(row : int) : void
+    - printSolution() : void
+}
+
+@enduml

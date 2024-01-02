@@ -1,0 +1,36 @@
+@startuml
+class tree {
+    
+    - root : treeNode* ¸ù½Úµã
+
+    + tree()
+    + ~tree()
+    + buildTree() : void
+    + buildFamily() : void
+    + addFamilyMember() : void
+    + delFamily() : void
+    + renameFamilyMember() : void
+    + findFamily(name : string) : treeNode*
+    + searchAt(root : treeNode*, name : string) : treeNode*
+    + countFamily(name : string) : int
+    + displayFamilyTree() : void
+    + printFamilyTree(node : treeNode*, indent : string = "") : void
+}
+
+class treeNode {
+    - name : string
+    # children : Vector<treeNode*>
+
+    + treeNode(Name : string)
+}
+
+class treeNode2 {
+    - name : string
+    - children : Vector<treeNode*>
+
+    + treeNode(Name : string)
+}
+
+treeNode --|> tree
+treeNode2 --|> tree
+@enduml
